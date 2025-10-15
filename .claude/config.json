@@ -1,0 +1,53 @@
+{
+  "mcpServers": {
+    "context7": {
+      "command": "npx",
+      "args": ["-y", "@context7/mcp-server"],
+      "description": "Latest Microsoft SDK documentation and best practices"
+    },
+    "sequential-thinking": {
+      "command": "npx",
+      "args": ["-y", "@modelcontextprotocol/server-sequential-thinking"],
+      "description": "Structured reasoning for complex troubleshooting and architecture decisions"
+    },
+    "azure-mcp": {
+      "command": "npx",
+      "args": ["-y", "@azure/mcp@latest", "server", "start"],
+      "description": "Azure service integration for CLI, storage, database, and logs"
+    },
+    "microsoft-learn": {
+      "command": "npx",
+      "args": ["-y", "mcp-remote", "https://learn.microsoft.com/api/mcp"],
+      "description": "Real-time Microsoft Learn documentation and code samples"
+    },
+    "github": {
+      "command": "npx",
+      "args": ["-y", "@modelcontextprotocol/server-github"],
+      "env": {
+        "GITHUB_PERSONAL_ACCESS_TOKEN": "REPLACE_WITH_YOUR_GITHUB_TOKEN"
+      },
+      "description": "GitHub integration for Actions, PRs, issues, and repositories"
+    },
+    "memory": {
+      "command": "npx",
+      "args": ["-y", "@modelcontextprotocol/server-memory"],
+      "description": "Knowledge graph memory for persistent learning across sessions"
+    },
+    "filesystem": {
+      "command": "npx",
+      "args": [
+        "-y",
+        "@modelcontextprotocol/server-filesystem",
+        "/mnt/c/Users/durge/Documents/ClaudeCode/Claude_Code_Marketplace/scripts",
+        "/mnt/c/Users/durge/Documents/ClaudeCode/Claude_Code_Marketplace/projects",
+        "/mnt/c/Users/durge/Documents/ClaudeCode/Claude_Code_Marketplace/docs"
+      ],
+      "description": "Secure file operations for script and project management"
+    },
+    "git": {
+      "command": "npx",
+      "args": ["-y", "@modelcontextprotocol/server-git"],
+      "description": "Git repository operations for version control"
+    }
+  }
+}
