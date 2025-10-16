@@ -49,13 +49,18 @@ cd AD-Msg-Cladue-Workspace && \
 ./install.sh
 ```
 
-**What the installer does**:
-- ✅ Installs SuperClaude Framework (25 commands, 16 personas)
+**What the installer does automatically**:
+- ✅ **Installs `pipx`** (if not already installed) - Auto-detects Ubuntu/Debian, macOS, or generic Linux
+- ✅ **Installs SuperClaude Framework** via pipx (25 commands, 16 personas, 7 modes)
+- ✅ Runs `SuperClaude install` to configure workspace
 - ✅ Installs IT Admin commands globally (13 commands)
 - ✅ Installs IT Admin agents globally (5 agents)
 - ✅ Configures 8 MCP servers
+- ✅ Merges workspace configuration to global `~/.claude/CLAUDE.md`
 - ✅ Copies documentation to `~/IT-Admin-Workspace-Docs/`
 - ✅ Makes everything available from **any directory** 🌍
+
+**Requirements**: Only Python 3 and Git needed - everything else is installed automatically!
 
 **After installation**: Open Claude Code in **any folder** and use all commands!
 
