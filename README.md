@@ -1,998 +1,500 @@
-# Personal IT Admin Workspace for Claude Code
+# 🚀 IT Admin Workspace for Claude Code
 
-A specialized Claude Code workspace for IT administrators focused on PowerShell automation, Azure deployment, and Microsoft 365 administration.
+<div align="center">
 
-## Overview
+**Your AI-Powered Command Center for IT Administration**
 
-This workspace enhances Claude Code with **SuperClaude Framework** + specialized commands, agents, and **8 MCP servers** to streamline:
+[![Claude Code](https://img.shields.io/badge/Claude-Code-5A67D8?style=for-the-badge&logo=anthropic)](https://claude.com/claude-code)
+[![SuperClaude](https://img.shields.io/badge/SuperClaude-Framework-00D9FF?style=for-the-badge)](https://superclaude.netlify.app/docs/)
+[![PowerShell](https://img.shields.io/badge/PowerShell-7+-5391FE?style=for-the-badge&logo=powershell)](https://github.com/PowerShell/PowerShell)
+[![Azure](https://img.shields.io/badge/Azure-Ready-0078D4?style=for-the-badge&logo=microsoft-azure)](https://azure.microsoft.com/)
 
-- **PowerShell script generation** for Active Directory, Azure, Entra ID, M365, Exchange, and Microsoft Graph
-- **GUI tool creation** using WPF/XAML for Windows administration with professional dark theme
-- **Azure deployment** with Static Web Apps, Storage Accounts, and GitHub Actions
-- **Admin operations** across AD, Entra ID, M365, Exchange, and Purview
-- **Strategic analysis** with business expert panel mode
-- **Systematic workflows** with 25 SuperClaude commands and 16 cognitive personas
+*Automate everything with AI-powered script generation, intelligent workflows, and 8 MCP servers*
 
-**Key Features**:
-- ✅ **SuperClaude Framework** - Meta-programming configuration layer with specialized development workflows
-- ✅ **Context7 MCP** - Always fetch latest Microsoft documentation and API specifications
-- ✅ **8 MCP Servers** - Enhanced capabilities for Azure, GitHub, Memory, and more
-- ✅ **Professional Dark Theme** - Microsoft Fluent Design for all GUI scripts
+[🎯 Quick Start](#-how-to-use-it) • [📚 Commands](#-command-categories) • [🤖 Agents](#-specialized-ai-agents) • [⚡ Setup](#-installation)
 
-## Quick Start
-
-### Prerequisites
-
-1. **Claude Code** installed ([installation guide](https://docs.claude.com/en/docs/claude-code))
-2. **Python 3.8+** or **Node.js 16+** (for SuperClaude Framework installation)
-3. **PowerShell** 7+ recommended
-4. **Azure CLI** (for Azure operations)
-5. **Git** (for GitHub workflow generation)
-
-### Installation
-
-1. **Clone or navigate to this workspace**:
-   ```bash
-   cd /path/to/Claude_Code_Marketplace
-   ```
-
-2. **Install SuperClaude Framework** (automatic):
-
-   ```bash
-   cd /path/to/Claude_Code_Marketplace && \
-   if ! command -v pipx &> /dev/null; then \
-       if command -v apt-get &> /dev/null; then \
-           sudo apt-get update && sudo apt-get install -y pipx; \
-       elif command -v brew &> /dev/null; then \
-           brew install pipx; \
-       else \
-           python3 -m pip install --user pipx && python3 -m pipx ensurepath; \
-       fi; \
-   fi && \
-   pipx install SuperClaude && SuperClaude install
-   ```
-
-   This automatically detects your OS, installs pipx if needed, then installs SuperClaude with 25 slash commands, 16 personas, and 7 behavioral modes.
-
-3. **Install MCP servers** (automatic on first use):
-   - Context7: `npx -y @context7/mcp-server`
-   - Sequential Thinking: `npx -y @modelcontextprotocol/server-sequential-thinking`
-   - Azure, GitHub, Memory, Filesystem, Git MCPs auto-install when needed
-
-4. **Setup GitHub Token** (required for GitHub MCP):
-   ```bash
-   # Set environment variable
-   export GITHUB_PERSONAL_ACCESS_TOKEN="ghp_your_token_here"
-   ```
-   See `SETUP_MCP_SERVERS.md` for complete token setup instructions.
-
-5. **Verify configuration**:
-   ```bash
-   # Check SuperClaude installation
-   ls .claude/commands/sc-*.md  # Should show 25 commands
-
-   # Check MCP configuration
-   cat .claude/config.json
-
-   # Restart Claude Code to load all components
-   ```
-
-### First Use
-
-**IT Admin Commands**:
-```bash
-# Generate a PowerShell script
-/ps-script "Create AD users from CSV with error logging"
-
-# Generate a GUI tool with dark theme
-/ps-gui "AD user search tool"
-
-# Deploy a web app
-/webapp-deploy "Deploy React app to Azure Static Web App"
-
-# Run an admin operation
-/ad-admin "Get all inactive users from last 90 days"
-```
-
-**SuperClaude Commands**:
-```bash
-# Intelligent implementation with auto persona selection
-/sc:implement "PowerShell module for AD user lifecycle management"
-
-# Comprehensive code analysis
-/sc:analyze scripts/AD/ --focus security
-
-# Generate documentation
-/sc:document scripts/
-
-# Strategic business analysis
-/sc:business-panel "Analyze our IT automation strategy"
-
-# Session management
-/sc:save  # Save current work
-/sc:load  # Resume previous session
-```
-
-## Slash Commands
-
-### PowerShell Generation
-
-#### `/ps-script "[description]"`
-Generate PowerShell scripts with error handling, logging, and best practices.
-
-**Examples**:
-```bash
-/ps-script "Bulk create AD users from CSV"
-/ps-script "Export all M365 licenses to Excel"
-/ps-script "Check Azure VM status across all subscriptions"
-```
-
-**Features**:
-- Error handling with try-catch
-- Parameter validation
-- Verbose logging
-- Module import checks
-- Latest cmdlet versions via Context7
+</div>
 
 ---
 
-#### `/ps-gui "[description]"`
-Generate PowerShell scripts with WPF/XAML GUI interfaces using professional dark theme.
+## ✨ What Is This?
 
-**Examples**:
-```bash
-/ps-gui "AD user management tool with search and property editing"
-/ps-gui "Azure VM dashboard showing status and metrics"
-/ps-gui "Exchange mailbox size reporter"
-```
+A **complete AI-powered workspace** that transforms Claude Code into your personal IT automation assistant. Generate PowerShell scripts, deploy Azure infrastructure, manage Microsoft 365, and analyze IT strategy—all through simple commands.
 
-**Features**:
-- WPF/XAML for modern UI
-- **Professional dark theme** (Microsoft Fluent Design)
-- Complete dark theme reference in `docs/PowerShell-GUI-Dark-Theme-Reference.md`
-- All controls styled (TextBox, Button, ComboBox, DataGrid, etc.)
-- High contrast accessibility compliance
-- Event handlers with error dialogs
-- Input validation and progress indicators
-- ReadOnly, Disabled, and Focus state styling
+### 🎁 What You Get
+
+| Feature | Description |
+|---------|-------------|
+| **🎯 38+ Commands** | 13 IT admin commands + 25 SuperClaude workflow commands |
+| **🤖 30 AI Agents** | 5 IT experts + 16 cognitive personas + 9 business strategists |
+| **⚡ 8 MCP Servers** | Context7, Sequential Thinking, Azure, GitHub, Memory, and more |
+| **🎨 Dark Theme** | Professional Microsoft Fluent Design for all GUI tools |
+| **📚 Documentation** | 11+ quick reference guides for PowerShell, Azure, Graph API |
+| **💾 Session Memory** | Save and resume work with full context preservation |
 
 ---
 
-#### `/ps-graph "[description]"`
-Generate Microsoft Graph PowerShell scripts with authentication and best practices.
+## 🎯 How to Use It
 
-**Examples**:
+> **New to this workspace? Start here!** 👇
+
+### 🏃 In 30 Seconds
+
+1. **Open Claude Code** in this directory
+2. **Type a command** like `/ps-gui "AD user search tool"`
+3. **Get production-ready code** instantly with error handling, logging, and professional UI
+
+### 💡 Common Tasks
+
+<table>
+<tr>
+<td width="50%">
+
+#### 📝 Generate PowerShell Scripts
+
 ```bash
-/ps-graph "Get all M365 groups and export members to CSV"
-/ps-graph "Create Entra ID users from CSV with license assignment"
-/ps-graph "Generate Teams usage report"
+/ps-script "Export inactive AD users to CSV"
+```
+→ Gets latest AD cmdlets and creates production-ready script
+
+</td>
+<td width="50%">
+
+#### 🎨 Create GUI Tools
+
+```bash
+/ps-gui "AD user management dashboard"
+```
+→ Beautiful dark-themed WPF/XAML interface
+
+</td>
+</tr>
+<tr>
+<td>
+
+#### ☁️ Deploy to Azure
+
+```bash
+/webapp-deploy "Deploy my React app"
+```
+→ Complete Azure + GitHub Actions setup
+
+</td>
+<td>
+
+#### 📊 Microsoft 365 Operations
+
+```bash
+/ps-graph "Export all M365 licenses"
+```
+→ Latest Graph API with authentication
+
+</td>
+</tr>
+<tr>
+<td>
+
+#### 🔍 Analyze Code
+
+```bash
+/sc:analyze scripts/ --focus security
+```
+→ Multi-domain analysis with recommendations
+
+</td>
+<td>
+
+#### 🧠 Strategic Planning
+
+```bash
+/sc:business-panel "IT automation strategy"
+```
+→ 9 business experts analyze your plans
+
+</td>
+</tr>
+</table>
+
+### 🎓 Your First Command
+
+Try this to see the power:
+
+```bash
+/ps-gui "Create an AD user search tool with filters for department and status"
 ```
 
-**Features**:
-- Latest Microsoft.Graph SDK via Context7
-- Proper authentication methods
-- Required permission documentation
-- Batch operations
-- Pagination handling
-- Throttling error handling
+**You'll get**: A complete PowerShell script with professional dark theme GUI, search functionality, data grids, and error handling—ready to run!
 
 ---
 
-#### `/ps-azure "[description]"`
-Generate Azure PowerShell scripts using Az modules.
+## ⚡ Installation
 
-**Examples**:
+### 📋 Prerequisites
+
+- ✅ **Claude Code** ([installation guide](https://docs.claude.com/en/docs/claude-code))
+- ✅ **Python 3.8+** or **Node.js 16+**
+- ✅ **PowerShell 7+** (recommended)
+- ✅ **Azure CLI** (for Azure operations)
+- ✅ **Git** (for version control)
+
+### 🚀 One-Command Setup
+
+**Linux/macOS/WSL:**
+
 ```bash
-/ps-azure "List all VMs with cost estimates"
-/ps-azure "Create storage account with lifecycle policy"
-/ps-azure "Tag all resources in resource group"
+cd /path/to/Claude_Code_Marketplace && \
+if ! command -v pipx &> /dev/null; then \
+    if command -v apt-get &> /dev/null; then \
+        sudo apt-get update && sudo apt-get install -y pipx; \
+    elif command -v brew &> /dev/null; then \
+        brew install pipx; \
+    else \
+        python3 -m pip install --user pipx && python3 -m pipx ensurepath; \
+    fi; \
+fi && \
+pipx install SuperClaude && SuperClaude install
 ```
 
-**Features**:
-- Latest Az modules via Context7
-- Resource naming conventions
-- Tagging support
-- Cost documentation
-- Error handling
+This automatically:
+- 🔍 Detects your operating system
+- 📦 Installs pipx if needed
+- ⚡ Installs SuperClaude Framework
+- ✨ Configures 25 commands, 16 personas, 7 behavioral modes
 
-### Web Development
+### 🔑 GitHub Token (Optional)
 
-#### `/webapp-deploy "[description]"`
-Deploy web applications to Azure Static Web Apps with GitHub Actions.
+For GitHub automation, set your token:
 
-**Examples**:
 ```bash
-/webapp-deploy "Deploy React SPA to Azure"
-/webapp-deploy "Setup static site with custom domain"
+export GITHUB_PERSONAL_ACCESS_TOKEN="ghp_your_token_here"
 ```
 
-**Features**:
-- Automatic GitHub Actions workflow generation
-- Framework detection (React, Vue, Angular, etc.)
-- Custom domain configuration
-- Environment variables setup
-- HTTPS by default
+See **[SETUP_MCP_SERVERS.md](SETUP_MCP_SERVERS.md)** for complete setup instructions.
 
 ---
 
-#### `/storage-setup "[description]"`
-Configure Azure Storage Accounts with security and lifecycle policies.
+## 📚 Command Categories
 
-**Examples**:
-```bash
-/storage-setup "Create blob storage for backups with auto-archival"
-/storage-setup "Setup file share with access tiers"
-```
+### 🔧 PowerShell Generation
 
-**Features**:
-- Blob containers with access control
-- SAS token generation
-- Lifecycle management policies
-- CORS configuration
-- Security hardening
+| Command | What It Does | Example |
+|---------|--------------|---------|
+| **`/ps-script`** | Generate PowerShell scripts | `/ps-script "Bulk create AD users"` |
+| **`/ps-gui`** | Create GUI tools with dark theme | `/ps-gui "Exchange mailbox reporter"` |
+| **`/ps-graph`** | Microsoft Graph operations | `/ps-graph "Export Teams channels"` |
+| **`/ps-azure`** | Azure PowerShell scripts | `/ps-azure "Tag all VMs by environment"` |
 
----
+### ☁️ Azure & Web Deployment
 
-#### `/github-workflow "[description]"`
-Generate GitHub Actions workflows for CI/CD.
+| Command | What It Does | Example |
+|---------|--------------|---------|
+| **`/webapp-deploy`** | Deploy to Azure Static Web Apps | `/webapp-deploy "Deploy React app"` |
+| **`/storage-setup`** | Configure Azure Storage | `/storage-setup "Blob storage for backups"` |
+| **`/github-workflow`** | Create CI/CD workflows | `/github-workflow "Deploy on push to main"` |
 
-**Examples**:
-```bash
-/github-workflow "Deploy to Azure on push to main"
-/github-workflow "Run tests and deploy to staging"
-```
+### 👥 Admin Operations
 
-**Features**:
-- Multi-environment support
-- Azure integration
-- Testing workflows
-- Artifact management
-- Secret management
+| Command | What It Does | Example |
+|---------|--------------|---------|
+| **`/ad-admin`** | Active Directory tasks | `/ad-admin "Get inactive users"` |
+| **`/entra-admin`** | Entra ID (Azure AD) | `/entra-admin "Bulk create users"` |
+| **`/m365-admin`** | Microsoft 365 | `/m365-admin "Create Teams"` |
+| **`/exchange-admin`** | Exchange Online | `/exchange-admin "Mailbox report"` |
+| **`/purview-admin`** | Compliance & governance | `/purview-admin "DLP policy"` |
 
-### Admin Operations
+### 🧠 SuperClaude Workflows
 
-#### `/ad-admin "[operation]"`
-Active Directory administrative operations.
+<details>
+<summary><b>25 Intelligent Commands</b> - Click to expand</summary>
 
-**Examples**:
-```bash
-/ad-admin "Create OU structure for new department"
-/ad-admin "Get all users with expired passwords"
-/ad-admin "Generate GPO report"
-```
+#### 🛠️ Implementation & Development
 
-**Features**:
-- User/group/computer management
-- OU operations
-- GPO management
-- Health checks
-- Replication monitoring
+| Command | Purpose |
+|---------|---------|
+| **`/sc:implement`** | Feature implementation with auto persona selection |
+| **`/sc:design`** | System architecture and API design |
+| **`/sc:build`** | Build, compile, and package projects |
+| **`/sc:test`** | Execute tests with coverage analysis |
 
----
+#### 🔍 Analysis & Quality
 
-#### `/entra-admin "[operation]"`
-Entra ID (Azure AD) operations via Microsoft Graph.
+| Command | Purpose |
+|---------|---------|
+| **`/sc:analyze`** | Multi-domain code analysis (quality, security, performance) |
+| **`/sc:improve`** | Systematic code improvements |
+| **`/sc:troubleshoot`** | Issue diagnosis and resolution |
+| **`/sc:cleanup`** | Dead code removal and optimization |
 
-**Examples**:
-```bash
-/entra-admin "Bulk create users from CSV"
-/entra-admin "Configure conditional access policy"
-/entra-admin "Export MFA status report"
-```
+#### 📖 Documentation & Planning
 
-**Features**:
-- User lifecycle management
-- Group management (dynamic/assigned)
-- Conditional access
-- MFA configuration
-- License management
+| Command | Purpose |
+|---------|---------|
+| **`/sc:document`** | Generate focused documentation |
+| **`/sc:explain`** | Clear explanations with examples |
+| **`/sc:estimate`** | Development time estimates |
+| **`/sc:brainstorm`** | Requirements discovery dialogue |
+| **`/sc:spec-panel`** | Multi-expert specification review |
 
----
+#### 🎯 Strategic Analysis
 
-#### `/m365-admin "[operation]"`
-Microsoft 365 administration (Teams, SharePoint, OneDrive).
+| Command | Purpose |
+|---------|---------|
+| **`/sc:business-panel`** | 9 business experts analyze your strategy |
 
-**Examples**:
-```bash
-/m365-admin "Create Teams with standard channels"
-/m365-admin "Audit SharePoint permissions"
-/m365-admin "Get OneDrive usage report"
-```
+#### 🔄 Workflow & Integration
 
-**Features**:
-- Teams provisioning
-- SharePoint site management
-- OneDrive administration
-- License optimization
-- Usage reporting
+| Command | Purpose |
+|---------|---------|
+| **`/sc:git`** | Intelligent git operations |
+| **`/sc:workflow`** | Generate implementation workflows |
+| **`/sc:task`** | Complex task orchestration |
+
+#### 💾 Session Management
+
+| Command | Purpose |
+|---------|---------|
+| **`/sc:save`** | Save session state and context |
+| **`/sc:load`** | Resume previous session |
+| **`/sc:reflect`** | Task validation and review |
+
+</details>
 
 ---
 
-#### `/exchange-admin "[operation]"`
-Exchange Server and Exchange Online management.
+## 🤖 Specialized AI Agents
 
-**Examples**:
-```bash
-/exchange-admin "Create shared mailbox with permissions"
-/exchange-admin "Configure mail flow rule"
-/exchange-admin "Generate mailbox size report"
-```
+Invoke with **`@agent-name`** for expert assistance:
 
-**Features**:
-- Mailbox management
-- Mail flow configuration
-- Transport rules
-- Migration operations
-- Compliance features
+| Agent | Expertise | Example Usage |
+|-------|-----------|---------------|
+| **`@powershell-builder`** | 🔹 PowerShell, XAML GUIs, modules | `@powershell-builder "Design modular AD system"` |
+| **`@azure-deployer`** | ☁️ Azure architecture, CI/CD, costs | `@azure-deployer "Multi-region deployment strategy"` |
+| **`@microsoft-graph-expert`** | 📊 Graph API, auth, batching | `@microsoft-graph-expert "Sync 10k users efficiently"` |
+| **`@ad-expert`** | 👥 Active Directory, GPO, replication | `@ad-expert "Troubleshoot replication issues"` |
+| **`@exchange-expert`** | 📧 Exchange, mail flow, hybrid | `@exchange-expert "Plan hybrid deployment"` |
+
+**Plus 16 SuperClaude Personas**: Analyzer, Architect, Builder, Debugger, Optimizer, Guardian, Documenter, Mentor, and more—auto-activate based on your task!
 
 ---
 
-#### `/purview-admin "[operation]"`
-Microsoft Purview compliance and governance.
+## 🎨 Professional Dark Theme
 
-**Examples**:
-```bash
-/purview-admin "Create retention policy for Teams"
-/purview-admin "Configure DLP policy for PCI data"
-/purview-admin "Run eDiscovery search"
-```
+All GUI scripts use **Microsoft Fluent Design** with professional dark theme:
 
-**Features**:
-- Retention policies
-- DLP policies
-- Sensitivity labels
-- eDiscovery
-- Audit log search
+<table>
+<tr>
+<td>
 
----
+**🎨 Color Palette**
+- Background: `#1E1E1E`
+- Controls: `#2D2D2D`
+- Accent: `#0078D4`
+- Text: `#FFFFFF`
 
-## SuperClaude Framework Commands
+</td>
+<td>
 
-SuperClaude Framework provides 25 specialized `/sc:` commands with intelligent persona activation and systematic workflows.
+**✨ Features**
+- 70+ styled controls
+- High contrast accessibility
+- ReadOnly/Disabled states
+- Focus indicators
+- Hover effects
 
-### Implementation & Development
+</td>
+</tr>
+</table>
 
-#### `/sc:implement "[description]"`
-Intelligent feature implementation with automatic persona selection.
-
-**Examples**:
-```bash
-/sc:implement "PowerShell module for AD user lifecycle management"
-/sc:implement "Azure deployment automation framework"
-```
-
-**Features**:
-- Auto-selects appropriate personas (Architect, Builder, etc.)
-- Context7 integration for latest documentation
-- Systematic workflow with validation gates
-- Cross-session memory for complex projects
+**Complete guide**: [docs/PowerShell-GUI-Dark-Theme-Reference.md](docs/PowerShell-GUI-Dark-Theme-Reference.md)
 
 ---
 
-#### `/sc:design "[description]"`
-System architecture and API design with comprehensive specifications.
+## ⚡ MCP Servers
 
-**Examples**:
-```bash
-/sc:design "Modular PowerShell automation framework"
-/sc:design "Azure Static Web App with Functions backend"
-```
+**8 powerful servers** enhance your workspace:
 
----
+| Server | Status | Purpose | Key Features |
+|--------|--------|---------|--------------|
+| **Context7** | ✅ | Latest Microsoft docs | API specs, cmdlets, best practices |
+| **Sequential Thinking** | ✅ | Complex reasoning | Multi-step analysis, troubleshooting |
+| **Azure MCP** | ✅ | Azure integration | CLI operations, storage, databases |
+| **MS Learn MCP** | ✅ | Official tutorials | Conceptual docs, code samples |
+| **GitHub MCP** | ⚠️ | GitHub automation | Actions, PRs, issues, workflows |
+| **Memory MCP** | ✅ | Persistent learning | Cross-session knowledge graph |
+| **Filesystem MCP** | ✅ | File operations | Secure bulk operations |
+| **Git MCP** | ✅ | Version control | Status, commits, branches |
 
-#### `/sc:build "[description]"`
-Build, compile, and package projects with error handling.
-
-**Examples**:
-```bash
-/sc:build "PowerShell module with manifest and documentation"
-```
+⚠️ **Note**: GitHub MCP requires a personal access token. See [SETUP_MCP_SERVERS.md](SETUP_MCP_SERVERS.md) for setup.
 
 ---
 
-#### `/sc:test "[description]"`
-Execute tests with coverage analysis and quality reporting.
+## 💼 Real-World Examples
 
-**Examples**:
+### Example 1: 🎨 AD User Management Tool
+
 ```bash
-/sc:test scripts/AD/
-/sc:test "Run Pester tests with coverage report"
+/ps-gui "AD user management tool with search, create, edit, and disable"
 ```
+
+**You get**:
+- ✅ Professional dark theme WPF/XAML interface
+- ✅ Search users by name/department/username
+- ✅ View detailed user properties
+- ✅ Edit attributes and reset passwords
+- ✅ Enable/disable accounts
+- ✅ Complete error handling
+
+**Saved to**: `scripts/AD/AD-User-Management-Tool.ps1`
 
 ---
 
-### Analysis & Quality
+### Example 2: ☁️ Deploy React App
 
-#### `/sc:analyze "[path]"`
-Comprehensive multi-domain code analysis.
-
-**Examples**:
 ```bash
-/sc:analyze scripts/AD/ --focus security
-/sc:analyze --think-hard scripts/
+/webapp-deploy "Deploy my React app to Azure"
 ```
 
-**Analysis Domains**:
-- Quality (code smells, maintainability)
-- Security (vulnerabilities, best practices)
-- Performance (bottlenecks, optimization)
-- Architecture (design patterns, modularity)
+**You get**:
+- ✅ Azure Static Web App created
+- ✅ GitHub Actions workflow (`.github/workflows/azure-static-web-apps.yml`)
+- ✅ Automatic build and deployment
+- ✅ HTTPS endpoint
+- ✅ Custom domain instructions
 
 ---
 
-#### `/sc:improve "[path or description]"`
-Systematic code quality and performance improvements.
+### Example 3: 📊 M365 License Report
 
-**Examples**:
 ```bash
-/sc:improve scripts/AD/User-Provisioning.ps1
-/sc:improve "Refactor for better error handling"
+/ps-graph "Export all M365 users with licenses to Excel"
 ```
+
+**You get**:
+- ✅ Latest Microsoft.Graph cmdlets
+- ✅ Proper authentication with scopes
+- ✅ Fetch all users with license details
+- ✅ Excel export with formatting
+- ✅ License SKU mapping
+- ✅ Required permissions documented
+
+**Saved to**: `scripts/Graph/Export-M365-Licenses.ps1`
 
 ---
 
-#### `/sc:troubleshoot "[issue description]"`
-Systematic issue diagnosis and resolution.
+### Example 4: 🧠 Strategic Analysis
 
-**Examples**:
 ```bash
-/sc:troubleshoot "Azure deployment failing with auth error"
-/sc:troubleshoot "PowerShell script intermittent failures"
+/sc:business-panel "Analyze our IT automation strategy and ROI"
 ```
+
+**You get**:
+- ✅ Analysis from 9 business thought leaders:
+  - 💼 **Porter**: Competitive positioning
+  - 🔨 **Christensen**: Innovation approach
+  - 🧭 **Drucker**: Management effectiveness
+  - 🕸️ **Meadows**: Systems thinking
+  - 🏆 **Collins**: Organizational excellence
+- ✅ Strategic recommendations
+- ✅ Risk assessment
+- ✅ Implementation priorities
 
 ---
 
-#### `/sc:cleanup "[path]"`
-Code cleanup, dead code removal, and project organization.
+## 📖 Documentation
 
-**Examples**:
-```bash
-/sc:cleanup scripts/
-/sc:cleanup "Remove unused functions and optimize imports"
-```
+### 📚 Quick References (in `docs/`)
 
----
+| Document | What's Inside |
+|----------|---------------|
+| **[PowerShell-GUI-Dark-Theme-Reference.md](docs/PowerShell-GUI-Dark-Theme-Reference.md)** | Complete dark theme guide (70+ controls) |
+| **[superclaude-integration.md](docs/superclaude-integration.md)** | SuperClaude Framework complete guide |
+| **[powershell-patterns.md](docs/powershell-patterns.md)** | Common patterns, error handling, logging |
+| **[azure-deployment-guide.md](docs/azure-deployment-guide.md)** | Azure CLI, Static Web Apps, cost tips |
+| **[microsoft-graph-examples.md](docs/microsoft-graph-examples.md)** | Auth, users, groups, Teams, batching |
+| **[ad-quickref.md](docs/ad-quickref.md)** | AD cmdlets, filters, bulk ops, GPO |
+| **[recommended-mcp-servers.md](docs/recommended-mcp-servers.md)** | MCP server analysis and setup |
 
-### Documentation & Planning
+### 🛠️ Setup Guides
 
-#### `/sc:document "[path or description]"`
-Generate focused documentation for components and APIs.
-
-**Examples**:
-```bash
-/sc:document scripts/AD/
-/sc:document "Create user guide for AD management tools"
-```
-
----
-
-#### `/sc:explain "[topic or code]"`
-Clear explanations with educational focus.
-
-**Examples**:
-```bash
-/sc:explain "How does Microsoft Graph batching work?"
-/sc:explain scripts/Complex-Automation.ps1
-```
+| Guide | Purpose |
+|-------|---------|
+| **[SETUP_MCP_SERVERS.md](SETUP_MCP_SERVERS.md)** | Complete setup for SuperClaude + 8 MCP servers |
+| **[PROJECT_COMPLETE.md](PROJECT_COMPLETE.md)** | Project completion summary and statistics |
 
 ---
 
-#### `/sc:estimate "[task description]"`
-Development time estimates with intelligent analysis.
+## 🎯 Workflow Examples
 
-**Examples**:
+### 🔄 Session-Based Development
+
 ```bash
-/sc:estimate "Implement AD user provisioning automation"
-```
-
----
-
-#### `/sc:brainstorm "[topic]"`
-Interactive requirements discovery through Socratic dialogue.
-
-**Examples**:
-```bash
+# Session 1: Start project
 /sc:brainstorm "Automate user onboarding process"
-```
-
----
-
-### Strategic Analysis
-
-#### `/sc:business-panel "[topic or @document]"`
-Multi-expert strategic analysis with 9 business thought leaders.
-
-**Examples**:
-```bash
-/sc:business-panel "Analyze our IT automation strategy"
-/sc:business-panel @automation_roadmap.md
-```
-
-**Expert Panel**:
-- **Clayton Christensen** - Innovation and disruption
-- **Michael Porter** - Competitive strategy
-- **Peter Drucker** - Management effectiveness
-- **Seth Godin** - Change management
-- **Jim Collins** - Organizational excellence
-- **Nassim Taleb** - Risk and antifragility
-- **Donella Meadows** - Systems thinking
-- **Jean-luc Doumont** - Communication clarity
-
-**Modes**:
-- `--mode discussion` - Collaborative analysis (default)
-- `--mode debate` - Adversarial challenge mode
-- `--mode socratic` - Question-driven exploration
-
----
-
-### Workflow & Integration
-
-#### `/sc:git "[operation]"`
-Intelligent git operations with smart commit messages.
-
-**Examples**:
-```bash
-/sc:git "Commit all AD automation scripts"
-/sc:git "Create feature branch for Azure deployment"
-```
-
----
-
-#### `/sc:workflow "@prd or description"`
-Generate implementation workflows from PRDs.
-
-**Examples**:
-```bash
-/sc:workflow @automation_platform_prd.md
-```
-
----
-
-#### `/sc:task "[complex task]"`
-Complex task orchestration with intelligent delegation.
-
-**Examples**:
-```bash
-/sc:task "Modernize all PowerShell scripts to latest patterns"
-```
-
----
-
-### Session Management
-
-#### `/sc:save`
-Save current session state and project context.
-
-**Usage**:
-```bash
 /sc:save
-```
 
-Saves:
-- Current work progress
-- Active tasks and todos
-- Project context and decisions
-- Tool selections and patterns
-
----
-
-#### `/sc:load`
-Resume previous session with full context restoration.
-
-**Usage**:
-```bash
+# Session 2: Implementation
 /sc:load
-```
+/sc:implement "User onboarding automation framework"
+/sc:save
 
-Restores:
-- Session state and progress
-- Task list and priorities
-- Project context
-- Previous work patterns
-
----
-
-#### `/sc:reflect "[topic]"`
-Task validation and quality assessment.
-
-**Examples**:
-```bash
-/sc:reflect "User provisioning automation project"
+# Session 3: Testing
+/sc:load
+/sc:test scripts/Onboarding/
+/sc:reflect "User onboarding project"
 ```
 
 ---
 
-### Additional Commands
-
-- **`/sc:spec-panel`** - Multi-expert specification review
-- **`/sc:index`** - Generate project documentation and knowledge base
-- **`/sc:spawn`** - Meta-system task breakdown and delegation
-- **`/sc:select-tool`** - Intelligent MCP tool selection
-
-**See**: `docs/superclaude-integration.md` for complete SuperClaude documentation
-
----
-
-## Specialized Agents
-
-Invoke agents with `@agent-name "[task]"` for expert assistance.
-
-### `@powershell-builder`
-**Expert in**: PowerShell development, XAML GUIs, Microsoft modules, error handling
-
-**Use for**:
-- Complex script architecture
-- Performance optimization
-- Advanced error handling
-- Module integration
-- GUI design
-
-**Example**:
-```bash
-@powershell-builder "Design a modular AD user provisioning system with validation"
-```
-
----
-
-### `@azure-deployer`
-**Expert in**: Azure deployment, Static Web Apps, GitHub Actions, cost optimization
-
-**Use for**:
-- Azure architecture design
-- Deployment strategy
-- CI/CD pipeline optimization
-- Cost analysis
-- Resource naming and tagging
-
-**Example**:
-```bash
-@azure-deployer "Plan a multi-environment deployment strategy for static web app"
-```
-
----
-
-### `@microsoft-graph-expert`
-**Expert in**: Microsoft Graph API, authentication, batch operations, permissions
-
-**Use for**:
-- Graph API architecture
-- Authentication methods
-- Permission optimization
-- Batch operation design
-- Throttling handling
-
-**Example**:
-```bash
-@microsoft-graph-expert "Design efficient approach for syncing 10k users to external system"
-```
-
----
-
-### `@ad-expert`
-**Expert in**: Active Directory, GPO, replication, trust relationships, FSMO roles
-
-**Use for**:
-- AD architecture design
-- GPO troubleshooting
-- Replication issues
-- Trust configuration
-- Health monitoring
-
-**Example**:
-```bash
-@ad-expert "Troubleshoot replication failure between domain controllers"
-```
-
----
-
-### `@exchange-expert`
-**Expert in**: Exchange Server, Exchange Online, mail flow, hybrid deployment
-
-**Use for**:
-- Mail flow troubleshooting
-- Hybrid configuration
-- Migration planning
-- Compliance setup
-- Performance tuning
-
-**Example**:
-```bash
-@exchange-expert "Plan Exchange hybrid deployment with minimal downtime"
-```
-
-## MCP Servers
-
-This workspace includes **8 MCP servers** providing enhanced capabilities:
-
-⚠️ **Setup Required**: GitHub MCP requires a personal access token. See `SETUP_MCP_SERVERS.md` for complete setup instructions.
-
-### 1. Context7 ✅
-**Purpose**: Fetch latest Microsoft documentation and SDK references
-
-**Auto-activated for**: All PowerShell generation, Azure operations, Microsoft Graph scripts
-
-**Provides**: Latest cmdlet documentation, API specifications, best practices, code examples
-
----
-
-### 2. Sequential Thinking ✅
-**Purpose**: Structured reasoning for complex troubleshooting and architecture decisions
-
-**Use with**: `--think` flag for complex analysis, architecture design, multi-step troubleshooting
-
----
-
-### 3. Azure MCP ✅
-**Purpose**: Native Azure service integration
-
-**Capabilities**:
-- Direct Azure CLI operations
-- File storage (blob, files) management
-- Database and logs querying
-- Azure resource operations
-
-**Enhances**: `/ps-azure`, `/webapp-deploy`, `/storage-setup` commands
-
----
-
-### 4. Microsoft Learn MCP ✅
-**Purpose**: Real-time Microsoft Learn documentation
-
-**Capabilities**:
-- Official Microsoft tutorials
-- Conceptual documentation
-- Code samples from Microsoft Learn
-- Latest best practices
-
-**Complements**: Context7 (Context7 = API/SDK, MS Learn = tutorials/concepts)
-
----
-
-### 5. GitHub MCP ⚠️
-**Purpose**: GitHub Actions, PR, and issue management
-
-**Capabilities**:
-- GitHub Actions workflow management
-- Create/manage pull requests and issues
-- Repository operations
-- GitHub automation
-
-**Enhances**: `/github-workflow` command
-
-**⚠️ Requires**: GitHub Personal Access Token (see `SETUP_MCP_SERVERS.md`)
-
----
-
-### 6. Memory MCP ✅
-**Purpose**: Persistent knowledge graph across sessions
-
-**Capabilities**:
-- Remember script patterns and preferences
-- Track common operations
-- Learn from user interactions
-- Build workspace knowledge graph
-
-**Usage**: "Remember that I prefer..." statements
-
----
-
-### 7. Filesystem MCP ✅
-**Purpose**: Secure file operations for workspace management
-
-**Capabilities**:
-- Bulk file operations
-- Script organization
-- Directory management
-- Secure file access (limited to `scripts/`, `projects/`, `docs/`)
-
----
-
-### 8. Git MCP ✅
-**Purpose**: Git repository operations and version control
-
-**Capabilities**:
-- Git status, diff, log
-- Commit operations
-- Branch management
-- Repository history
-
-**Usage**: "Show git status", "Commit all scripts", "Create feature branch"
-
----
-
-### Complete Setup
-
-See **`SETUP_MCP_SERVERS.md`** for:
-- GitHub token setup instructions
-- Verification tests for each MCP server
-- Troubleshooting guide
-- Performance notes
-
-See **`docs/recommended-mcp-servers.md`** for:
-- Detailed analysis of each MCP server
-- Why each server was selected
-- Complete configuration reference
-
-## Directory Structure
-
-```
-Claude_Code_Marketplace/
-├── .claude/
-│   ├── config.json              # MCP server configuration
-│   ├── CLAUDE.md                # Workspace behavior instructions
-│   ├── commands/                # Slash command definitions
-│   │   ├── ps-script.md         # IT Admin commands
-│   │   ├── ps-gui.md
-│   │   ├── ps-graph.md
-│   │   ├── ps-azure.md
-│   │   ├── webapp-deploy.md
-│   │   ├── storage-setup.md
-│   │   ├── github-workflow.md
-│   │   ├── ad-admin.md
-│   │   ├── entra-admin.md
-│   │   ├── m365-admin.md
-│   │   ├── exchange-admin.md
-│   │   ├── purview-admin.md
-│   │   └── sc-*.md              # 25 SuperClaude commands
-│   ├── agents/                  # Specialized agent definitions
-│   │   ├── powershell-builder.md
-│   │   ├── azure-deployer.md
-│   │   ├── microsoft-graph-expert.md
-│   │   ├── ad-expert.md
-│   │   ├── exchange-expert.md
-│   │   └── [16 SuperClaude personas]
-│   ├── modes/                   # SuperClaude behavioral modes
-│   │   ├── MODE_Brainstorming.md
-│   │   ├── MODE_Introspection.md
-│   │   ├── MODE_Orchestration.md
-│   │   └── [7 behavioral modes]
-│   └── business/                # Business expert panel
-│       └── [9 thought leader personas]
-├── docs/                        # Quick reference documentation
-│   ├── PowerShell-GUI-Dark-Theme-Reference.md
-│   ├── powershell-patterns.md
-│   ├── azure-deployment-guide.md
-│   ├── microsoft-graph-examples.md
-│   ├── ad-quickref.md
-│   ├── recommended-mcp-servers.md
-│   └── superclaude-integration.md
-├── scripts/                     # Generated scripts organized by category
-│   ├── AD/
-│   ├── Azure/
-│   ├── Entra/
-│   ├── M365/
-│   ├── Exchange/
-│   ├── Graph/
-│   └── Purview/
-├── projects/                    # Web application projects
-├── SETUP_MCP_SERVERS.md         # Complete setup instructions
-└── README.md                    # This file
-```
-
-## Quick Reference Documentation
-
-Located in `docs/` directory for fast reference:
-
-- **`PowerShell-GUI-Dark-Theme-Reference.md`**: **REQUIRED** comprehensive dark theme for all GUI scripts (Microsoft Fluent Design)
-- **`superclaude-integration.md`**: Complete SuperClaude Framework guide with all 25 commands, personas, and usage examples
-- **`powershell-patterns.md`**: Common PowerShell patterns, templates, error handling, logging, parallel processing
-- **`azure-deployment-guide.md`**: Azure CLI commands, Static Web Apps, Storage Accounts, cost optimization
-- **`microsoft-graph-examples.md`**: Authentication methods, user/group/Teams operations, permissions, batch operations
-- **`ad-quickref.md`**: Active Directory cmdlets, filters, bulk operations, GPO management, replication
-- **`recommended-mcp-servers.md`**: MCP server analysis, recommendations, and setup guide
-
-**Setup Instructions**:
-- **`SETUP_MCP_SERVERS.md`**: Complete setup instructions for SuperClaude Framework + 8 MCP servers
-
-## Usage Examples
-
-### Example 1: Create AD User Management Tool
+### 🚀 Complete Deployment Pipeline
 
 ```bash
-# Generate a GUI tool for AD user management
-/ps-gui "AD user management tool with search, create, edit, and disable capabilities"
+# Step 1: Expert consultation
+@azure-deployer "Review architecture for high-traffic app"
 
-# Result: PowerShell script with WPF/XAML GUI saved to scripts/AD/
-# - Search users by name, department, or username
-# - View user properties in detail panel
-# - Edit user attributes
-# - Enable/disable accounts
-# - Reset passwords
+# Step 2: Implementation
+/webapp-deploy "Deploy React app with Functions backend"
+
+# Step 3: Monitoring
+/ps-azure "Setup Application Insights and alerts"
+
+# Step 4: Documentation
+/sc:document projects/my-app/
 ```
 
-### Example 2: Deploy React App to Azure
+---
 
-```bash
-# Deploy a React application
-/webapp-deploy "Deploy my React app from GitHub to Azure Static Web App"
+## 🔐 Security Best Practices
 
-# Result:
-# - Azure Static Web App created
-# - GitHub Actions workflow generated (.github/workflows/azure-static-web-apps.yml)
-# - Automatic build and deployment configured
-# - HTTPS endpoint provided
-# - Custom domain instructions included
-```
+| Area | Best Practice |
+|------|---------------|
+| **Credentials** | ❌ Never hardcode • ✅ Use Azure Key Vault |
+| **Permissions** | ✅ Always use least privilege approach |
+| **Scripts** | ✅ Review before production • ✅ Test in dev first |
+| **Git** | ✅ Add `.env` and credentials to `.gitignore` |
+| **Audit** | ✅ Enable logging for all admin operations |
 
-### Example 3: Microsoft Graph Report
+---
 
-```bash
-# Generate M365 license report
-/ps-graph "Export all M365 users with their assigned licenses to Excel"
+## 🐛 Troubleshooting
 
-# Result: PowerShell script saved to scripts/Graph/
-# - Connects to Microsoft Graph with proper scopes
-# - Fetches all users with license details
-# - Exports to Excel with formatting
-# - Includes license SKU mapping
-# - Documents required permissions
-```
-
-### Example 4: Exchange Mailbox Report
-
-```bash
-# Generate mailbox size report
-/exchange-admin "Generate report of all mailboxes over 45GB with growth trend"
-
-# Result: PowerShell script saved to scripts/Exchange/
-# - Connects to Exchange Online
-# - Gets mailbox statistics
-# - Filters by size
-# - Calculates growth trend
-# - Exports to CSV with charts
-```
-
-## Best Practices
-
-### PowerShell Scripts
-- Always review generated scripts before running in production
-- Test in development environment first
-- Ensure required modules are installed
-- Verify permissions before execution
-- Review credential handling approach
-
-### Azure Deployment
-- Review resource naming conventions
-- Verify cost estimates
-- Configure monitoring and alerts
-- Set up proper tagging
-- Document disaster recovery approach
-
-### Microsoft Graph
-- Use least privilege permissions
-- Implement throttling handling for large operations
-- Use batch operations for efficiency
-- Document required API permissions
-- Test authentication methods
-
-### Security
-- Never commit credentials to version control
-- Use Azure Key Vault for secrets
-- Implement least privilege access
-- Review security best practices in `.claude/CLAUDE.md`
-- Enable audit logging for admin operations
-
-## Troubleshooting
-
-### MCP Servers Not Loading
-
-**Issue**: Commands fail with MCP errors
+<details>
+<summary><b>❓ MCP Servers Not Loading</b></summary>
 
 **Solution**:
 ```bash
-# Verify MCP configuration
+# Verify configuration
 cat .claude/config.json
 
-# Test MCP servers manually
+# Test MCP servers
 npx -y @context7/mcp-server
 npx -y @modelcontextprotocol/server-sequential-thinking
 
 # Restart Claude Code
 ```
+</details>
 
-### PowerShell Module Not Found
-
-**Issue**: Generated script fails with "Module not found"
+<details>
+<summary><b>❓ PowerShell Module Not Found</b></summary>
 
 **Solution**:
 ```powershell
@@ -1002,14 +504,14 @@ Install-Module Az -Scope CurrentUser
 Install-Module Microsoft.Graph -Scope CurrentUser
 Install-Module ExchangeOnlineManagement -Scope CurrentUser
 
-# Update existing modules
+# Update modules
 Update-Module Az
 Update-Module Microsoft.Graph
 ```
+</details>
 
-### Azure CLI Not Authenticated
-
-**Issue**: Azure commands fail with authentication error
+<details>
+<summary><b>❓ Azure CLI Not Authenticated</b></summary>
 
 **Solution**:
 ```bash
@@ -1022,138 +524,167 @@ az account show
 # Set default subscription
 az account set --subscription "Your Subscription Name"
 ```
-
-### GitHub Actions Workflow Fails
-
-**Issue**: Deployment workflow fails to run
-
-**Solution**:
-1. Verify `AZURE_STATIC_WEB_APPS_API_TOKEN` secret is set in GitHub repository
-2. Check workflow file syntax in `.github/workflows/`
-3. Review workflow run logs in GitHub Actions tab
-4. Ensure Azure Static Web App exists and is accessible
-
-## Advanced Usage
-
-### Professional Dark Theme for XAML GUIs
-
-All GUI scripts generated with `/ps-gui` automatically include a comprehensive professional dark theme.
-
-**Theme Reference**: See `docs/PowerShell-GUI-Dark-Theme-Reference.md` for:
-- Complete color palette (#1E1E1E background, #0078D4 accent)
-- All control styles (70+ controls)
-- Microsoft Fluent Design principles
-- High contrast accessibility compliance
-- ReadOnly, Disabled, and Focus states
-
-**Key Features**:
-- **Primary Background**: #1E1E1E (professional dark appearance)
-- **Control Background**: #2D2D2D (TextBox, ComboBox, DataGrid)
-- **Accent Blue**: #0078D4 (Microsoft's official blue)
-- **Text Color**: #FFFFFF (high contrast on dark background)
-- **Hover States**: #106EBE (interactive feedback)
-- **Focus Indicators**: Blue borders for accessibility
-- **ReadOnly Styling**: Distinct #1A1A1A background
-- **Disabled Styling**: #666666 text color
-
-**All controls styled**:
-TextBox, Button, ComboBox, DataGrid, ListView, ListBox, CheckBox, RadioButton, ProgressBar, PasswordBox, TabControl, TreeView, Menu, MenuItem, ContextMenu, ToolTip, GroupBox, Label, ScrollBar, and more.
-
-The theme is embedded directly in generated GUI scripts, ensuring consistent professional appearance across all tools.
-
-### Combining Commands with Agents
-
-For complex tasks, combine commands with specialized agents:
-
-```bash
-# Step 1: Get expert advice
-@azure-deployer "Review architecture for high-traffic static web app with API backend"
-
-# Step 2: Implement based on recommendations
-/webapp-deploy "Deploy React app with Azure Functions backend"
-
-# Step 3: Add monitoring
-/ps-azure "Setup Application Insights and alerts for static web app"
-```
-
-### Using Sequential Thinking for Complex Decisions
-
-For complex troubleshooting or architecture decisions:
-
-```bash
-# Invoke with --think flag
-/ps-script "Design modular user provisioning system" --think
-
-# Claude will use Sequential Thinking MCP to:
-# 1. Break down the problem
-# 2. Analyze architecture options
-# 3. Evaluate trade-offs
-# 4. Recommend best approach
-# 5. Generate optimized code
-```
-
-## Contributing to This Workspace
-
-This is a personal workspace, but you can customize it for your needs:
-
-1. **Add new commands**: Create `.md` files in `.claude/commands/`
-2. **Add new agents**: Create `.md` files in `.claude/agents/`
-3. **Customize behavior**: Edit `.claude/CLAUDE.md`
-4. **Add MCP servers**: Update `.claude/config.json`
-
-## Resources
-
-### Documentation
-- [Claude Code Documentation](https://docs.claude.com/en/docs/claude-code)
-- [SuperClaude Documentation](https://superclaude.netlify.app/docs/) - Official SuperClaude docs
-- [SuperClaude Framework GitHub](https://github.com/SuperClaude-Org/SuperClaude_Framework)
-- [Model Context Protocol (MCP)](https://modelcontextprotocol.io/)
-- [Context7 MCP Server](https://github.com/context7/mcp-server)
-- [Microsoft Graph Documentation](https://learn.microsoft.com/en-us/graph/)
-- [Azure Static Web Apps](https://learn.microsoft.com/en-us/azure/static-web-apps/)
-
-### Quick References (in `docs/`)
-- **PowerShell GUI Dark Theme Reference** - Comprehensive dark theme for all GUI scripts
-- **SuperClaude Integration Guide** - Complete framework documentation with 25 commands
-- PowerShell Patterns - Common patterns and best practices
-- Azure Deployment Guide - Azure CLI and deployment workflows
-- Microsoft Graph Examples - Graph API authentication and operations
-- Active Directory Quick Reference - AD cmdlets and operations
-- Recommended MCP Servers - MCP server analysis and setup
-
-### Microsoft PowerShell Modules
-- [ActiveDirectory](https://learn.microsoft.com/en-us/powershell/module/activedirectory/)
-- [Az](https://learn.microsoft.com/en-us/powershell/azure/new-azureps-module-az)
-- [Microsoft.Graph](https://learn.microsoft.com/en-us/powershell/microsoftgraph/)
-- [ExchangeOnlineManagement](https://learn.microsoft.com/en-us/powershell/exchange/exchange-online-powershell)
-
-## Support
-
-For issues or questions:
-
-1. Check `.claude/CLAUDE.md` for workspace behavior documentation
-2. Review quick reference docs in `docs/`
-3. Consult command definitions in `.claude/commands/`
-4. Review agent capabilities in `.claude/agents/`
-5. Check `REVISED_PLAN.md` for complete workspace architecture
-
-## License
-
-Personal workspace - customize and use as needed.
+</details>
 
 ---
 
-**Version**: 2.0
-**Last Updated**: 2025-10-12
-**Components**: SuperClaude Framework + 8 MCP Servers + IT Admin Commands
-**Workspace Type**: Personal IT Admin Productivity
-**Target Audience**: IT Administrators, PowerShell Developers, Azure Engineers
+## 📊 Workspace Structure
 
-**What's New in v2.0**:
-- ✅ SuperClaude Framework integration with 25 specialized commands
-- ✅ 16 cognitive AI personas with auto-activation
-- ✅ Business expert panel mode with 9 thought leaders
-- ✅ 8 MCP servers (Azure, GitHub, Memory, Filesystem, Git, MS Learn, Context7, Sequential)
-- ✅ Professional dark theme for all GUI scripts
-- ✅ Session management with /sc:save and /sc:load
-- ✅ Systematic workflows and token-efficient communication
+```
+Claude_Code_Marketplace/
+├── 📁 .claude/                    # Workspace configuration
+│   ├── config.json                # MCP server configuration
+│   ├── CLAUDE.md                  # Workspace behavior
+│   ├── 📁 commands/               # 38+ slash commands
+│   ├── 📁 agents/                 # 30 AI agents
+│   ├── 📁 modes/                  # 7 behavioral modes
+│   └── 📁 business/               # 9 business experts
+├── 📁 docs/                       # Quick reference guides
+│   ├── PowerShell-GUI-Dark-Theme-Reference.md
+│   ├── superclaude-integration.md
+│   ├── powershell-patterns.md
+│   ├── azure-deployment-guide.md
+│   ├── microsoft-graph-examples.md
+│   ├── ad-quickref.md
+│   └── recommended-mcp-servers.md
+├── 📁 scripts/                    # Generated scripts by category
+│   ├── AD/
+│   ├── Azure/
+│   ├── Entra/
+│   ├── M365/
+│   ├── Exchange/
+│   ├── Graph/
+│   └── Purview/
+├── 📁 projects/                   # Web application projects
+├── 📄 SETUP_MCP_SERVERS.md        # Complete setup guide
+├── 📄 PROJECT_COMPLETE.md         # Completion summary
+└── 📄 README.md                   # This file
+```
+
+---
+
+## 🌟 What Makes This Special?
+
+<table>
+<tr>
+<td width="50%">
+
+### 🎯 Production-Ready Code
+
+Every script includes:
+- ✅ Error handling (try-catch)
+- ✅ Input validation
+- ✅ Verbose logging
+- ✅ Module version checks
+- ✅ Best practices
+- ✅ Complete documentation
+
+</td>
+<td width="50%">
+
+### 🚀 Always Up-to-Date
+
+Context7 ensures:
+- ✅ Latest cmdlet versions
+- ✅ Current API specifications
+- ✅ Microsoft best practices
+- ✅ Newest SDK features
+- ✅ Official documentation
+
+</td>
+</tr>
+<tr>
+<td>
+
+### 🧠 Intelligent Workflows
+
+SuperClaude provides:
+- ✅ 16 cognitive personas
+- ✅ Auto persona selection
+- ✅ Systematic workflows
+- ✅ Session memory
+- ✅ Strategic analysis
+
+</td>
+<td>
+
+### 🎨 Professional UI
+
+Dark theme includes:
+- ✅ Microsoft Fluent Design
+- ✅ 70+ styled controls
+- ✅ Accessibility compliance
+- ✅ All state styling
+- ✅ Modern appearance
+
+</td>
+</tr>
+</table>
+
+---
+
+## 🔗 Resources
+
+### 📚 Documentation
+
+- [Claude Code Official Docs](https://docs.claude.com/en/docs/claude-code)
+- [SuperClaude Framework](https://superclaude.netlify.app/docs/)
+- [Model Context Protocol (MCP)](https://modelcontextprotocol.io/)
+- [Microsoft Graph API](https://learn.microsoft.com/en-us/graph/)
+- [Azure Static Web Apps](https://learn.microsoft.com/en-us/azure/static-web-apps/)
+
+### 🛠️ PowerShell Modules
+
+- [ActiveDirectory Module](https://learn.microsoft.com/en-us/powershell/module/activedirectory/)
+- [Az PowerShell Module](https://learn.microsoft.com/en-us/powershell/azure/new-azureps-module-az)
+- [Microsoft.Graph SDK](https://learn.microsoft.com/en-us/powershell/microsoftgraph/)
+- [ExchangeOnlineManagement](https://learn.microsoft.com/en-us/powershell/exchange/exchange-online-powershell)
+
+---
+
+## 💬 Need Help?
+
+1. **📖 Check Documentation**: Review [SETUP_MCP_SERVERS.md](SETUP_MCP_SERVERS.md)
+2. **🔍 Search Commands**: Look in `.claude/commands/` for command details
+3. **🤖 Ask Agents**: Use `@powershell-builder` or other agents for guidance
+4. **📚 Quick Refs**: Browse `docs/` for quick reference guides
+
+---
+
+## 📈 Version History
+
+### 🎉 Version 2.0 (Current)
+
+**Major Enhancements**:
+- ✅ SuperClaude Framework integration (25 commands, 16 personas)
+- ✅ 8 MCP servers (up from 2)
+- ✅ Business expert panel mode
+- ✅ Professional dark theme for all GUIs
+- ✅ Session management with save/load
+- ✅ Systematic workflows and token efficiency
+
+**Statistics**:
+- **Commands**: 38+ (13 IT + 25 SuperClaude)
+- **Agents**: 30 (5 IT + 16 SuperClaude + 9 business)
+- **MCP Servers**: 8 configured
+- **Documentation**: 11+ reference guides
+
+---
+
+<div align="center">
+
+## 🚀 Ready to Transform Your IT Workflow?
+
+**[⚡ Get Started](#-installation)** • **[📚 View Commands](#-command-categories)** • **[🤖 Meet the Agents](#-specialized-ai-agents)**
+
+---
+
+**Built with** ❤️ **for IT Administrators**
+
+[![GitHub](https://img.shields.io/badge/GitHub-Repository-181717?style=flat-square&logo=github)](https://github.com/durgesh0505/AD-Msg-Cladue-Workspace)
+[![License](https://img.shields.io/badge/License-Personal-blue?style=flat-square)](LICENSE)
+[![Version](https://img.shields.io/badge/Version-2.0-success?style=flat-square)](PROJECT_COMPLETE.md)
+
+**Status**: ✅ **PRODUCTION READY** | **Last Updated**: 2025-10-16
+
+</div>
