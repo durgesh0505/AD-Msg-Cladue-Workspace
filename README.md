@@ -11,7 +11,7 @@
 
 *Automate everything with AI-powered script generation, intelligent workflows, and 8 MCP servers*
 
-[🎯 Quick Start](#-how-to-use-it) • [📚 Commands](#-command-categories) • [🤖 Agents](#-specialized-ai-agents) • [⚡ Setup](#-installation)
+[🔧 Add to Claude Code](#-add-this-workspace-to-claude-code) • [🎯 How to Use](#-how-to-use-it) • [📚 Commands](#-command-categories) • [🤖 Agents](#-specialized-ai-agents) • [⚡ Setup](#-installation)
 
 </div>
 
@@ -31,6 +31,83 @@ A **complete AI-powered workspace** that transforms Claude Code into your person
 | **🎨 Dark Theme** | Professional Microsoft Fluent Design for all GUI tools |
 | **📚 Documentation** | 11+ quick reference guides for PowerShell, Azure, Graph API |
 | **💾 Session Memory** | Save and resume work with full context preservation |
+
+---
+
+## 🔧 Add This Workspace to Claude Code
+
+> **Get this workspace running in 2 minutes!** 🚀
+
+### 📦 Clone from GitHub
+
+**Linux/macOS/WSL:**
+```bash
+# Clone the repository
+git clone https://github.com/durgesh0505/AD-Msg-Cladue-Workspace.git
+
+# Navigate to the workspace
+cd AD-Msg-Cladue-Workspace
+
+# Open in Claude Code
+claude-code .
+```
+
+**Windows PowerShell:**
+```powershell
+# Clone the repository
+git clone https://github.com/durgesh0505/AD-Msg-Cladue-Workspace.git
+
+# Navigate to the workspace
+cd AD-Msg-Cladue-Workspace
+
+# Open in Claude Code
+claude-code .
+```
+
+**Windows Command Prompt:**
+```cmd
+# Clone the repository
+git clone https://github.com/durgesh0505/AD-Msg-Cladue-Workspace.git
+
+# Navigate to the workspace
+cd AD-Msg-Cladue-Workspace
+
+# Open in Claude Code
+claude-code .
+```
+
+---
+
+### ✅ Verify Installation
+
+Once opened in Claude Code, verify everything works:
+
+```bash
+# Test 1: Check if commands are available
+# Try typing "/" in Claude Code - you should see all commands
+
+# Test 2: Test a simple command
+/ps-script "Get current date and time"
+
+# Test 3: Check MCP servers (if installed)
+# Commands will automatically use Context7 for documentation
+```
+
+**You should see**:
+- ✅ 38+ slash commands available (type `/` to see them)
+- ✅ 30 AI agents ready (type `@` to see them)
+- ✅ Commands generate production-ready code
+- ✅ Professional dark theme for GUI scripts
+
+---
+
+### 🎯 Next Steps
+
+After adding the workspace:
+
+1. **📖 Read**: [SETUP_MCP_SERVERS.md](SETUP_MCP_SERVERS.md) - Install SuperClaude Framework + MCP servers
+2. **🎓 Try**: Your first command (see below)
+3. **📚 Explore**: Browse `docs/` for quick reference guides
 
 ---
 
@@ -675,7 +752,7 @@ Dark theme includes:
 
 ## 🚀 Ready to Transform Your IT Workflow?
 
-**[⚡ Get Started](#-installation)** • **[📚 View Commands](#-command-categories)** • **[🤖 Meet the Agents](#-specialized-ai-agents)**
+**[🔧 Add to Claude Code](#-add-this-workspace-to-claude-code)** • **[⚡ Get Started](#-installation)** • **[📚 View Commands](#-command-categories)** • **[🤖 Meet the Agents](#-specialized-ai-agents)**
 
 ---
 
