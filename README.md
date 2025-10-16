@@ -38,9 +38,33 @@ A **complete AI-powered workspace** that transforms Claude Code into your person
 
 > **Get this workspace running in 2 minutes!** 🚀
 
-### 📦 Clone from GitHub
+### ⚡ Automatic Global Installation (Recommended)
 
-**Linux/macOS/WSL:**
+**One command to install everything globally** - Use commands from **any directory**:
+
+```bash
+# Clone and run the installer
+git clone https://github.com/durgesh0505/AD-Msg-Cladue-Workspace.git && \
+cd AD-Msg-Cladue-Workspace && \
+./install.sh
+```
+
+**What the installer does**:
+- ✅ Installs SuperClaude Framework (25 commands, 16 personas)
+- ✅ Installs IT Admin commands globally (13 commands)
+- ✅ Installs IT Admin agents globally (5 agents)
+- ✅ Configures 8 MCP servers
+- ✅ Copies documentation to `~/IT-Admin-Workspace-Docs/`
+- ✅ Makes everything available from **any directory** 🌍
+
+**After installation**: Open Claude Code in **any folder** and use all commands!
+
+---
+
+### 📦 Manual Installation (Workspace-Specific)
+
+If you only want to use this in a specific directory:
+
 ```bash
 # Clone the repository
 git clone https://github.com/durgesh0505/AD-Msg-Cladue-Workspace.git
@@ -48,31 +72,7 @@ git clone https://github.com/durgesh0505/AD-Msg-Cladue-Workspace.git
 # Navigate to the workspace
 cd AD-Msg-Cladue-Workspace
 
-# Open in Claude Code
-claude-code .
-```
-
-**Windows PowerShell:**
-```powershell
-# Clone the repository
-git clone https://github.com/durgesh0505/AD-Msg-Cladue-Workspace.git
-
-# Navigate to the workspace
-cd AD-Msg-Cladue-Workspace
-
-# Open in Claude Code
-claude-code .
-```
-
-**Windows Command Prompt:**
-```cmd
-# Clone the repository
-git clone https://github.com/durgesh0505/AD-Msg-Cladue-Workspace.git
-
-# Navigate to the workspace
-cd AD-Msg-Cladue-Workspace
-
-# Open in Claude Code
+# Open in Claude Code (commands only work in this directory)
 claude-code .
 ```
 
@@ -633,6 +633,7 @@ Claude_Code_Marketplace/
 │   ├── Graph/
 │   └── Purview/
 ├── 📁 projects/                   # Web application projects
+├── 📄 install.sh                  # 🌍 Global installation script
 ├── 📄 SETUP_MCP_SERVERS.md        # Complete setup guide
 ├── 📄 PROJECT_COMPLETE.md         # Completion summary
 └── 📄 README.md                   # This file
